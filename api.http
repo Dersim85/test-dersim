@@ -1,0 +1,45 @@
+get http://localhost:3000
+
+###
+
+GET http://localhost:3000/students
+
+###
+
+GET http://localhost:3000/students/2
+
+### add students
+
+post http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name": "dersim ahmed",
+    "gender": "female",
+    "course_id": 1
+}
+
+### Update Student
+
+PUT http://localhost:3000/students/3
+Content-Type: application/json
+
+{
+    "name": "Zaki",
+    "gender": "m",
+    "course_id": 2
+}
+
+### Partial Update Student (course_id)
+
+PATCH http://localhost:3000/students/3
+Content-Type: application/json
+
+{
+    "course_id": 3
+}
+
+### Delete Student
+DELETE http://localhost:3000/students/4
+Content-Type: application/json
+
